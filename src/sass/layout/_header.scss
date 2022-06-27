@@ -1,0 +1,272 @@
+.header {
+  background-color: #f6f7f9;
+  color: #7c284e;
+
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.container {}
+
+.header__container {
+  // display: flex;
+  // align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header__nav {
+  // display: flex;
+  // align-items: center;
+  margin-left: auto;
+}
+
+.nav__list {
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  line-height: 80px;
+}
+
+.nav__item {
+  position: relative;
+  // padding: 0 14px;
+  // line-height: 80px;
+
+  &:hover{
+    color: #ffffff;
+    background-color: #591f3d;
+  }
+
+  &:hover .sub-nav__list {
+      display: block;
+    }
+}
+
+.current {
+    border-bottom: 5px solid #591f3d;
+    margin-bottom: -5px;
+}
+
+.nav__link-icon{
+  padding:0 20px;
+}
+
+.nav__icon{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 160%;
+  -webkit-transform: translateY(15%);
+  -ms-transform: translateY(15%);
+  transform: translateY(15%);
+
+  &::before{
+    content: "\f015";
+    
+  }
+}
+
+.nav__home-icon{
+  fill: currentcolor;
+}
+
+.nav__link {
+    padding-left: 14px;
+    padding-right: 25px;
+
+    &::before{
+      content: '';
+      position: absolute;
+      right: 12px;
+      margin-top: 2px;
+      top: 50%;
+      bottom: auto;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      color: inherit;
+      border: 4px solid transparent;
+      border-top: 4px solid #ffffff;
+      transition: border 0.15s;
+      border-top-color: inherit;
+    }
+}
+
+.sub-nav__list {
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  background-color: #f6f7f9;
+  color: #7c284e;
+
+  display: none;
+
+  line-height: 20px;
+
+  padding: 15px;
+  width: 230px;
+  position: absolute;
+
+  border-top: 2px solid #591f3d;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
+
+}
+
+.sub-nav__item {}
+
+.sub-nav__link {
+  padding: 8px 10px;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+}
+
+.search__link {
+  width: 30px;
+  text-align: center;
+}
+
+.search__icon{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  font-size: 16px;
+
+  &::before{
+    content: '\f002';
+  }
+}
+
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  opacity: 0;
+  //  -webkit-transition: opacity 400ms ease-in;
+  //  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  padding: 80px 15px 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.modal__modal-form{
+    position: relative;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.modal-form__input{
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  background: rgba(0, 0, 0, 0.7) !important;
+  font-weight: 500;
+  font-size: 22px;
+  border: 0;
+  padding-right: 80px;
+  padding-left: 30px;
+  color: #ffffff;
+  outline: none;
+}
+
+.modal-form__btn{
+  width: auto;
+  color: #666;
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  background: transparent;
+  transition: 0.15s;
+  cursor: pointer;
+  border: none;
+&:hover{
+  color: #ffffff;
+}
+}
+
+.btn__icon{
+  font-size: 28px;
+}
+
+ .close {
+  color: #ffffff;
+  position: absolute ;
+  top: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 22px;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+   color: #bf2718;
+  }
+ }
+
+.close__icon{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 22px;
+  
+    &::before{
+      content: "\e117";
+    }
+}
+
+ .close-icon{
+  fill: currentColor;
+ }
+
+ /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+ .close:focus,
+ .close:hover {
+  //  color: #000;
+  //  text-decoration: none;
+   cursor: pointer;
+   opacity: .75;
+ }
+
+ /* свойства для блока, содержащего основное содержимое окна */
+ .modal-body {
+   position: relative;
+   -webkit-box-flex: 1;
+   -webkit-flex: 1 1 auto;
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   padding: 15px;
+   overflow: auto;
+ }
