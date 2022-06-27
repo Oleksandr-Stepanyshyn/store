@@ -243,30 +243,6 @@
     font-size: 22px;
   
     &::before{
-      content: "\e117";
+      content: "\f00d";
     }
 }
-
- .close-icon{
-  fill: currentColor;
- }
-
- /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
- .close:focus,
- .close:hover {
-  //  color: #000;
-  //  text-decoration: none;
-   cursor: pointer;
-   opacity: .75;
- }
-
- /* свойства для блока, содержащего основное содержимое окна */
- .modal-body {
-   position: relative;
-   -webkit-box-flex: 1;
-   -webkit-flex: 1 1 auto;
-   -ms-flex: 1 1 auto;
-   flex: 1 1 auto;
-   padding: 15px;
-   overflow: auto;
- }
