@@ -122,7 +122,7 @@
 
   border-top: 2px solid #591f3d;
   box-shadow: 0 2px 5px rgb(0 0 0 / 10%);
-
+  z-index: 10;
 }
 
 .sub-nav__item {}
@@ -171,6 +171,7 @@
   opacity: 1;
   pointer-events: auto;
   overflow-y: auto;
+  z-index: 20;
 }
 
 .modal-dialog {
