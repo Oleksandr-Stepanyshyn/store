@@ -1,0 +1,136 @@
+.footer{
+  color: #ffffff;
+  background-color: #1f2024;
+  margin-top: 50px;
+  padding: 0;
+  display: block;
+
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.footer__widgets-container{
+  border-top: 8px solid #7c284e;
+  box-shadow: 0 -8px 0 rgb(0 0 0 / 7%);
+}
+
+.widget__container{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1200px;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.footer__info{
+  color: #ffffff;
+  background-color: #17171a;
+  padding: 20px 0;
+  line-height: 32px;
+  text-align: center;
+}
+
+.footer__body{
+  width: 100%;
+}
+
+.footer__menu{
+
+}
+
+.menu__item{
+  display: inline-block;
+  margin:0 5px;
+}
+
+.menu__item a{
+  &:hover{
+    color: #7c284e;
+  }
+}
+
+.social-icons__item{
+  display: inline-block;
+  margin: 0;
+  position: relative;
+}
+
+.social-icons__link{
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0;
+  display: block;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.social-icon--facebook:hover {
+  background-color: #4080FF;
+}
+
+.social-icon--twitter:hover {
+  background-color: #40bff5;
+}
+
+.social-icon--pinterest:hover {
+  background-color: #e13138;
+}
+
+.social-icon--instagram:hover {
+  background-color: #c13584;
+}
+
+.social-icon{
+  color: #ffffff;
+  transition: 0.15s;
+  font-family: "Font Awesome 6 Brands";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-block;
+}
+
+.icon-facebook::before{
+  content: "\f09a";
+}
+
+.icon-twitter::before {
+  content: "\f099";
+}
+
+.icon-pinterest::before {
+  content: "\f0d2";
+}
+
+.icon-instagram::before {
+  content: "\f16d";
+}
+
+.screen-reader-text{
+  border: 0;
+  clip: rect(1px,1px,1px,1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  word-wrap: normal!important;
+}
