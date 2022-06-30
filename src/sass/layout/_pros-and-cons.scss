@@ -1,0 +1,93 @@
+.column-box{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #2c2f34;
+  background-color: #f6f6f6;
+  margin-bottom: 20px;
+  padding: 20px 0;
+
+  line-height: 26px;
+  font-size: 15px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.column-box__half{
+  width: 48%;
+  position: relative;
+  margin-right: 4%;
+  float: left;
+
+  &::after{
+    content: none;
+    position: absolute;
+    right: -7%;
+    border-left: 2px solid #e5e5e5;
+    top: 0;
+    bottom: 0;
+
+    @media screen and (min-width: 992px) {
+        content: "";
+      }
+  }
+}
+
+.column-box__half.last{
+  margin-right: 0;
+
+  &::after{
+    content: none;
+  }
+}
+
+.half__title{
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #7c284e;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 0.5em;
+}
+
+.half__box{
+}
+
+.half__list{
+  margin-left: 20px;
+}
+
+.half__item{
+  margin-bottom : 5px;
+  padding-left: 25px;
+  line-height: 25px;
+}
+
+.plus .half__item::before{
+  color: #0ab154;
+  content: "\2b";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: -25px;
+  float: left;
+}
+
+.minus .half__item::before {
+  color: #f01818;
+  content: "\f068";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-left: -25px;
+  float: left;
+}

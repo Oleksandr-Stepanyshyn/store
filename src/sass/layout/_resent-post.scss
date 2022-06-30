@@ -1,21 +1,13 @@
-.sidebar{
-  display: block;
-  position: relative;
-  width: 33.3333%;
-  padding-left: 15px;
-  color: #333333;
-}
-
-.sidebar__sticky{
-  position: sticky;
-  top: 0;
-}
-
 .sidebar__container {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
   padding: 30px;
+  margin-bottom: 30px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
 }
 
 
@@ -50,7 +42,7 @@
   }
 }
 
-.sidebar-subtitle {
+.sidebar__subtitle {
   font-family: 'Montserrat';
   font-size: 15px;
   min-height: 15px;

@@ -16,11 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&amp;subset=cyrillic"
       rel="stylesheet"
@@ -30,16 +25,22 @@
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <!-- <include src="./partials/example.html"></include> -->
+  <body id="go-to-body">
     <include src="./partials/header.html"></include>
     <main class="container main__section">
       <div class="main__content">
         <include src="./partials/product-table.html"></include>
+        <include src="./partials/pros-and-cons.html"></include>
+        <include src="./partials/specification.html"></include>
       </div>
-      <include src="./partials/aside.html"></include>
+      <aside class="sidebar" aria-label="Primary Sidebar">
+        <div class="sidebar__sticky">
+          <include src="./partials/right-navigation.html"></include>
+          <include src="./partials/resent-post.html"></include>
+        </div>
+      </aside>
     </main>
     <include src="./partials/footer.html"></include>
+    <include src="./partials/go-top-button.html"></include>
   </body>
 </html>
